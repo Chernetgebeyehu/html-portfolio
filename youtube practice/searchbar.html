@@ -1,0 +1,1916 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title> Exrcise2 </title>
+
+  <style>
+    .request {
+      background-color: black;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 18px;
+      padding-right: 18px;
+      color: white;
+      border: none;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .request:hover {
+      opacity: 0.7;
+    }
+
+    .add {
+      background-color: rgb(255, 216, 20);
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 45px;
+      padding-right: 45px;
+      color: black;
+      border: none;
+      border-radius: 15px;
+      font-weight: bold;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .add:hover {
+      background-color: rgb(245, 205, 3);
+    }
+
+    .sign {
+      background-color: rgb(46, 164, 79);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: boxshadow 0.15s;
+    }
+
+    .sign:hover {
+      box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .get {
+      background-color: rgb(121, 82, 179);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.15s;
+    }
+
+    .get:hover {
+      background-color: rgb(99, 60, 156);
+    }
+
+    .download {
+      background-color: white;
+      color: rgb(108, 117, 125);
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-width: 1px;
+      border-color: rgb(108, 117, 125);
+      border-style: solid;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: background-color 0.15s,
+        color 0.15s;
+    }
+
+    .download:hover {
+      background-color: rgb(108, 117, 125);
+      color: white;
+    }
+
+    .apply {
+      background-color: rgb(10, 102, 194);
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 15px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+
+    .apply:hover {
+      background-color: rgb(2, 70, 138);
+    }
+
+    .save {
+      background-color: white;
+      color: rgb(10, 102, 194);
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-width: 1px;
+      border-color: rgb(10, 102, 194);
+      border-style: solid;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 15px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: background-color 0.15s,
+        border-width 0.15s;
+    }
+
+    .save:hover {
+      background-color: rgb(226, 240, 254);
+      border-width: 2px;
+    }
+
+    .buynow {
+      background-color: rgb(225, 164, 28);
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 35px;
+      padding-right: 35px;
+      border: none;
+      border-radius: 18px;
+      font-weight: bold;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .buy:hover {
+      background-color: rgb(250, 137, 0);
+    }
+
+    .buy:active {
+      opacity: 0.5;
+    }
+
+    .add1 {
+      background-color: rgb(247, 202, 0);
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border: none;
+      border-radius: 15px;
+      font-weight: bold;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .add1:hover {
+      background-color: rgb(247, 202, 0);
+    }
+
+    .add1:active {
+      opacity: 0.5;
+    }
+
+    .amazon {
+      color: rgb(0, 113, 113);
+    }
+
+    .amazon:hover {
+      color: rgb(218, 46, 66);
+    }
+
+    .nike {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .dollar {
+      color: rgb(0, 136, 0);
+      font-weight: bold;
+    }
+
+    .free {
+      font-size: 18px;
+    }
+
+    .back,
+    .next {
+      margin-left: 8px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .searchresult {
+      margin-left: 4px;
+      margin-right: 4px;
+      font-size: 18px;
+    }
+
+    .strech {
+      background-color: Green;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: white;
+      border: none;
+      margin-right: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    .strech:hover {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+
+    .shadow {
+      background-color: Green;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
+      color: white;
+      border: none;
+      margin-right: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .shadow:active {
+      margin-left: 3px;
+      margin-top: 3px;
+      box-shadow: none;
+    }
+
+    .strech-button {
+      background-color: Green;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: white;
+      border: none;
+      margin-right: 10px;
+      margin-left: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+
+    .strech-button:hover {
+      padding-left: 25px;
+      padding-right: 25px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    .tahoma {
+      font-family: Tahoma;
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .biggest {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .sales {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: rgb(218, 46, 66);
+      font-family: Arial;
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    .HTML {
+      font-family: Verdana;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    .beginner {
+      font-family: Verdana;
+      margin-top: 0;
+      color: gray;
+    }
+
+    .inthis {
+      font-family: Verdana;
+      font-size: 14px;
+      width: 250px;
+    }
+
+    .getstarted-button2 {
+      background-color: Green;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .shoping {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .see {
+      font-family: Arial;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .learn {
+      color: rgb(58, 108, 199);
+      font-family: Arial;
+      text-align: center;
+    }
+
+    .new {
+      text-align: center;
+      color: rgb(245, 99, 0);
+      font-family: Arial;
+      margin-bottom: 0;
+    }
+
+    .mac {
+      font-family: Arial;
+      font-size: 23px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    .supercharged {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 40px;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .from {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .buybutton2 {
+      background-color: rgb(0, 113, 227);
+      color: white;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      border: none;
+      border-radius: 22px;
+      font-family: Arial;
+      font-weight: bold;
+    }
+
+    .usdnumber {
+      font-family: Arial;
+      font-size: 38px;
+      margin-bottom: 0;
+    }
+
+    .usd {
+      font-family: Arial;
+      font-size: 18px;
+      color: rgb(100, 100, 100);
+    }
+
+    .today {
+      font-family: Arial;
+      color: rgb(24, 128, 56);
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    .after {
+      font-family: Arial;
+      color: rgb(100, 100, 100);
+      margin-top: 10px;
+    }
+
+    .negative {
+      font-family: Arial;
+      color: rgb(235, 39, 39);
+    }
+
+    .free {
+      font-family: Arial;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    .free2 {
+      font-family: Arial;
+      color: rgb(100, 100, 100);
+      font-weight: normal;
+    }
+
+    .as {
+      font-family: Arial;
+      width: 600px;
+      margin-top: 10px;
+      line-height: 25px;
+      font-size: 18px;
+    }
+
+    .here {
+      font-family: Arial;
+      font-size: 18px;
+    }
+
+    .chp {
+      color: rgb(29, 155, 240);
+    }
+
+    .model {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 40px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .order {
+      font-family: Arial;
+      text-align: center;
+      font-size: 20px;
+      margin-top: 5px;
+    }
+
+    .touchless {
+      text-decoration: underline;
+    }
+
+    .catpicture1 {
+      width: 200px;
+      border-radius: 15px;
+    }
+
+    .catpicture2 {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .catpicture3 {
+      width: 150px;
+      height: 150px;
+      border-radius: 100px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .search1 {
+      border-width: 1px;
+      border-radius: 8px;
+      border-style: solid;
+      border-color: rgb(200, 200, 200);
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: Arial;
+      font-size: 18px;
+    }
+
+    .search2 {
+      width: 500px;
+      border: none;
+      border-radius: 20px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: Arial;
+      font-size: 16px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    .email {
+      font-family: Arial;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .search3 {
+      width: 400px;
+      font-size: 16px;
+      border-radius: 5px;
+      border-style: solid;
+      border-color: rgb(100, 100, 100);
+      border-width: 2px;
+      margin-top: 0;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      margin-bottom: 20px;
+    }
+
+    .by {
+      font-family: Arial;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .agreeandjoin {
+      background-color: rgb(10, 102, 194);
+      color: white;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      width: 400px;
+      border: none;
+      border-radius: 30px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .smallcirclecat,
+    .what,
+    .tweet-button {
+      display: inline-block;
+    }
+
+    .smallcirclecat {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 25px;
+      vertical-align: middle;
+      margin-right: 5px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .smallcirclecat2 {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 25px;
+      vertical-align: middle;
+      margin-right: 5px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .smallcircledog {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 25px;
+      vertical-align: middle;
+      margin-right: 5px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .follow-button {
+      background-color: rgb(29, 155, 240);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      vertical-align: middle;
+
+    }
+
+    .thecat,
+    .popular,
+    .sleepy,
+    .happy {
+      font-family: Arial;
+      color: rgb(100, 100, 100);
+    }
+
+
+    .what {
+      font-family: Arial;
+      font-size: 16px;
+      vertical-align: middle;
+      margin-left: 5px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .tweet-button {
+      background-color: rgb(29, 155, 240);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
+      vertical-align: middle;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .what {
+      font-family: Arial;
+      color: rgb(100, 100, 100);
+      font-size: 18px;
+      border: none;
+      width: 300px;
+      vertical-align: middle;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .name,
+    .email-box {
+      display: block;
+    }
+
+    .name {
+      margin-bottom: 5px;
+    }
+
+    .thanks {
+      font-size: 18px;
+      width: 230px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .google-logo {
+      width: 200px;
+      margin-left: 150px;
+      margin-bottom: 10px;
+    }
+
+    .google-search {
+      width: 500px;
+      border: none;
+      border-radius: 30px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-family: Arial;
+      font-size: 18px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+      display: block;
+    }
+
+    .first,
+    .last {
+      border-width: 1px;
+      border-radius: 8px;
+      border-style: solid;
+      border-color: rgb(200, 200, 200);
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: Arial;
+      font-size: 18px;
+      width: 113px;
+    }
+
+    .email-box2 {
+      border-width: 1px;
+      border-radius: 8px;
+      border-style: solid;
+      border-color: rgb(200, 200, 200);
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: Arial;
+      font-size: 18px;
+      width: 265px;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .signup {
+      background-color: rgb(47, 127, 231);
+      color: white;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      width: 300px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .div-1 {
+      background-color: red;
+      width: 80px;
+      height: 80px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .div-2 {
+      background-color: green;
+      width: 80px;
+      height: 80px;
+      border-radius: 100px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .div-3 {
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(150, 150, 150);
+      width: 300px;
+      padding-left: 15px;
+      padding-bottom: 20px;
+    }
+
+    .satisfied {
+      font-family: Arial;
+      font-size: 16px;
+    }
+
+    .div-4 {
+      background-color: rgb(33, 33, 33);
+      color: white;
+      width: 360px;
+      border: none;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+    }
+
+    .install {
+      font-family: Arial;
+      font-size: 24px;
+    }
+
+    .addyoutube {
+      font-family: Arial;
+      color: rgb(160, 160, 160);
+    }
+
+    .div-5 {
+      border: none;
+      border-radius: 6px;
+      width: 450px;
+      padding-left: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-bottom: 12px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.3)
+    }
+
+    .div-6 {
+      width: 200px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      margin-left: 20px;
+    }
+
+    .oliver-grid {
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+      column-gap: 20px;
+    }
+
+    .oliver {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 8px;
+      margin-bottom: 4px;
+      margin-top: 0;
+    }
+
+    .twomutual,
+    .threemutual,
+    .fourmutual {
+      color: rgb(100, 100, 100);
+      font-family: Arial;
+      margin-left: 8px;
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+
+    .cat-picture1 {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .add-friend-button {
+      background-color: rgb(24, 119, 242);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-left: 8px;
+      margin-bottom: 10px;
+    }
+
+    .div-6,
+    .div-7,
+    .div-8 {
+      width: 200px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      margin-left: 20px;
+    }
+
+    .cat-picture2 {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .dog-picture1 {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .mimi {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 8px;
+      margin-bottom: 4px;
+      margin-top: 0;
+    }
+
+
+    .rex {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 8px;
+      margin-bottom: 4px;
+      margin-top: 0;
+    }
+
+    .dog-picture2 {
+      width: 25px;
+      height: 25px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 100px;
+      margin-left: 10px;
+    }
+
+
+    .google-search-button,
+    .feeling-lucky-button {
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+
+    .google-search-button,
+    .feeling-lucky-button {
+      background-color: rgb(245, 245, 245);
+      border: none;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 15px;
+    }
+
+    .google-search-button {
+      margin-left: 70px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body style="height:3000px;
+padding-top: 80px;
+padding-left: 80px;">
+
+
+  <div style="background-color: rgb(248, 248, 248);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0px;
+      height: 50px;
+      display: flex;
+      font-family: Arial;
+      align-items: center;">
+
+    <img style="width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-right: 10px;
+        margin-left: 100px;" src="cat.jpg">
+
+    <div style="font-weight: bold;
+    flex: 1;">
+      Oliver Cat
+    </div>
+
+    <button style=" background-color: rgb(24, 119, 242);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 10px;
+    ">Add Friend</button>
+    <button style="
+      background-color: rgb(224, 224, 224);
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: bold;
+      margin-right: 50px;
+      cursor: pointer;">Message</button>
+    <div style="background-color: rgb(235, 235, 235);
+        color: black;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 50px;
+        width: 60px;
+        padding-left: 10px;">sidebar
+    </div>
+
+  </div>
+
+  <button> Click </button>
+  <hr>
+
+  <button> Chere </button>
+  <button> Burgur </button>
+  <hr>
+
+  <p> Hello World </p>
+  <hr>
+
+  <p> Hello World </p>
+  <p> Today I went to church and me and my friends had a great time together and in my family we had a disscusion time
+    on some issues </p>
+  <hr>
+
+  <a href="https://www.google.com">Search with Google</a>
+  <hr>
+
+  <a href="https://www.google.com" target="-blank">Search with Google</a>
+  <hr>
+
+  <a class="amazon" href="https://www.amazon.com" target="-blank">Back to Amazon</a>
+  <p class="nike"> Nike Black Running shoes </p>
+  <p class="dollar"> $38 - in stock.</p>
+  <p class="free"> Free delivery tomorrow.</p>
+  <button class="add1"> Add to Cart </button>
+  <button class="buynow"> Buy now </button>
+  <hr>
+
+  <button class="request"> Request now </button>
+
+  <button class="add"> Add to Cart </button>
+
+  <button class="sign"> Sign up </button>
+
+  <button class="get"> Get started </button>
+
+  <button class="download"> Download </button>
+
+  <button class="apply"> Apply on company website</button>
+
+  <button class="save"> Save </button>
+
+  <hr>
+
+  <button class="back"> Back </button>
+  <a class="searchresult" href="https://www.google.com">1</a>
+  <a class="searchresult" href="https://www.google.com">2</a>
+  <a class="searchresult" href="https://www.google.com">3</a>
+  <a class="searchresult" href="https://www.google.com">4</a>
+  <a class="searchresult" href="https://www.google.com">5</a>
+  <button class="next"> Next </button>
+  <hr>
+
+  <button class="strech"> Strech </button>
+  <hr>
+
+  <button class="shadow"> Shadow </button>
+  <hr>
+
+  <button class="strech-button"> One </button>
+  </div>
+  <button class="strech-button"> Two </button> </div>
+  <button class="strech-button"> Three </button> </div>
+  <hr>
+
+  <p class="tahoma">This is Tahoma Font</p>
+  <hr>
+
+  <p class="biggest">Biggest Deals of the year!</p>
+  <p class="sales">Sales end Tuesday</p>
+  <hr>
+
+  <p class="HTML">HTML CSS Course</p>
+  <p class="beginner">Beginner to Pro</p>
+  <p class="inthis">In this course, we'll learn the skills you need to become a developer.</p>
+  <button class="getstarted-button2">Get Started</button>
+  <hr>
+
+  <p class="shoping">Shoping for your bussiness?</p>
+  <p class="see">See how Apple at Work can help.</p>
+  <p class="learn">Learn more &gt;</p>
+  <hr>
+
+  <p class="new">New</p>
+  <p class="mac">
+    MacBook Pro
+  </p>
+  <p class="supercharged">
+    Supercharged for pros.
+  </p>
+  <p class="from">
+    From $1999
+  </p>
+  <p style="text-align: center;">
+    <span class="buybutton2">Buy</span>
+  </p>
+  <hr>
+
+  <p class="usdnumber">
+    1,049.61 <span class="usd">USD</span>
+  </p>
+  <p class="today">
+    +18.05 (1.75%) today
+  </p>
+  <p class="after">
+    After hours 1,048.00 <span class="negative">-1.61 (0.15%)</span>
+  </p>
+  <hr>
+
+  <p class="free">
+    freeCodeCamp.org
+    <span class="free2"> @ freeCodeCamp 1h</span>
+  </p>
+  <p class="as">
+    As a web developer, you'll want to make
+    your projects easy to use and navigate around.
+  </p>
+  <p class="here">
+    Here <span class="chp"> @ chp_it </span>
+    outlines the top skills
+    new developers should have.
+  </p>
+  <hr>
+
+  <p class="model">
+    Model 3
+  </p>
+  <p class="order">
+    Order Online for
+    <span class="touchless">Touchless Delivery</span>
+  </p>
+  <hr>
+
+  <img class="catpicture1" src="cat.jpg">
+  <img class="catpicture2" src="cat.jpg">
+  <img class="catpicture3" src="cat.jpg">
+  <hr>
+
+  <input class="search1" type="text" placeholder="Search">
+  <hr>
+
+  <input class="search2" type="text" placeholder="Search Google or type a URL">
+  <hr>
+
+  <p class="email">Email</p>
+  <input class="search3" type="text">
+  <p class="by">
+    By clicking Agree & Join,you agree
+    to the Privacy Policy.</p>
+  <button class="agreeandjoin"> Agree & Join </button>
+  <hr>
+
+  <img class="smallcirclecat" src="cat.jpg">
+  <input type="text" class="what" placeholder="What's happening?">
+  <button class="tweet-button">Tweet</button>
+  <hr>
+
+  <input class="name" placeholder="Name">
+  <input class="email-box" placeholder="Email">
+  <hr>
+
+  <p class="thanks">Thanks for chatting with our customer
+    support. Would you like to take our quick survey?</p>
+  <button class="yes">Yes</button>
+  <button class="no">No</button>
+  <hr>
+
+  <img class="google-logo" src="image.png">
+  <input class="google-search" type="text" placeholder="Search Google or type a URL">
+  <hr>
+
+  <input class="first" type="text" placeholder="First name">
+  <input class="last" type="text" placeholder="Last name">
+  <input class="email-box2" type="text" placeholder="Email">
+  <button class="signup">Sign Up</button>
+  <hr>
+
+  <div class="div-1"></div>
+  <div class="div-2"></div>
+  <hr>
+
+  <div class="div-3">
+    <p class="satisfied">Satisfied with our service?</p>
+    <button class="yes">Yes</button>
+    <button class="no">No</button>
+  </div>
+  <hr>
+
+  <div class="div-4">
+    <p class="install">Install YouTube Music
+    <p>
+    <p class="addyoutube">Add YouTube Music to your
+      desktop for quick and easy access</p>
+  </div>
+  <hr>
+
+  <div class="div-5">
+    <img class="smallcirclecat" src="cat.jpg">
+    <input type="text" class="what" placeholder="What's happening?">
+    <button class="tweet-button">Tweet</button>
+  </div>
+  <hr>
+
+  <div class="div-6">
+    <img class="cat-picture1" src="cat.jpg">
+    <p class="oliver">Oliver</p>
+    <p class="twomutual">2 mutual friends</p>
+    <button class="add-friend-button">Add Friend</button>
+  </div>
+  <hr>
+
+  <div class="oliver-grid">
+    <div class="div-6">
+      <img class="cat-picture1" src="cat.jpg">
+      <p class="oliver">Oliver</p>
+      <div style="display: grid;
+        grid-template-columns: 35px 1fr;">
+        <img class="dog-picture2" src="dog2.jpg">
+        <p class="twomutual">2 mutual friends</p>
+      </div>
+      <button class="add-friend-button">Add Friend</button>
+    </div>
+    <div class="div-7">
+      <img class="cat-picture2" src="cat2.jpg">
+      <span class="mimi">Mimi</span>
+      <div style="display: grid;
+        grid-template-columns: 35px 1fr;">
+        <img class="dog-picture2" src="dog2.jpg">
+        <p class="threemutual">3 mutual friends</p>
+      </div>
+      <button class="add-friend-button">Add Friend</button>
+    </div>
+    <div class="div-8
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+      column-gap: 20px;">
+      <img class="dog-picture1" src="dog.jpg">
+      <p class="rex">Rex</p>
+      <div style="display: grid;
+        grid-template-columns: 35px 1fr;">
+        <img class="dog-picture2" src="dog2.jpg">
+        <p class="fourmutual">4 mutual friends</p>
+      </div>
+      <button class="add-friend-button">Add Friend</button>
+    </div>
+  </div>
+  <hr>
+
+  <div class="divgoogle-logo" style="display: block;">
+    <img class="google-logo" src="image.png">
+  </div>
+  <div class="divgoogle-search" style="display: block;">
+    <input class="google-search" type="text" placeholder="Search Google or type a URL">
+  </div>
+
+  <button class="google-search-button">Google Search</button>
+  <button class="feeling-lucky-button">I'm Feeling Lucky</button>
+  <hr>
+  <div style="
+      display:grid; grid-template-columns: 200px 75px">
+    <div class="grid-practice" style="background-color: lightblue;">200px</div>
+    <div class="grid-practice" style="background-color: lightpink;">75px</div>
+  </div>
+  <hr>
+  <div style="
+      display:grid; grid-template-columns: 50px 1fr 75px">
+    <div class="grid-practice" style="background-color: lightblue;">col1</div>
+    <div class="grid-practice" style="background-color: lightpink;">col2</div>
+    <div class="grid-practice" style="background-color: lightblue;">col3</div>
+  </div>
+  <hr>
+  <div style="
+      display:grid; grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 20px; row-gap: 10px;">
+    <div class="grid-practice" style="background-color: lightpink;">col1</div>
+    <div class="grid-practice" style="background-color: lightpink;">col2</div>
+    <div class="grid-practice" style="background-color: lightpink;">col3</div>
+    <div class="grid-practice" style="background-color: lightpink;">col4</div>
+    <div class="grid-practice" style="background-color: lightpink;">col1</div>
+    <div class="grid-practice" style="background-color: lightpink;">col2</div>
+    <div class="grid-practice" style="background-color: lightpink;">col3</div>
+    <div class="grid-practice" style="background-color: lightpink;">col4</div>
+  </div>
+  <hr>
+  <div style="
+        display: flex;
+        flex-direction: row;">
+    <div style="background-color: lightblue;
+    width: 200px;">
+      200px
+    </div>
+    <div style="background-color: lightpink;
+    width: 75px;">
+      75px
+    </div>
+  </div>
+  <hr>
+
+  <div style="
+      display: flex;
+      flex-direction: row;">
+    <div style="background-color: lightblue;
+    width: 50px;">
+      item1
+    </div>
+    <div style="background-color: lightpink;
+    flex: 1;">
+      item2
+    </div>
+    <div style="background-color: lightblue;
+        width: 75px;">
+      item3
+    </div>
+  </div>
+  <hr>
+
+  <div style="
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;">
+    <div style="background-color: lightpink;">
+      item1
+    </div>
+    <div style="background-color: lightpink;">
+      item2
+    </div>
+    <div style="background-color: lightpink;">
+      item3
+    </div>
+    <div style="background-color: lightpink;">
+      item4
+    </div>
+
+  </div>
+  <hr>
+
+  <div style="
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(150, 150, 150);
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;">
+
+    <div style="background-color: lightpink;">
+      item1
+    </div>
+    <div style="background-color: lightpink;">
+      item2
+    </div>
+
+  </div>
+  <hr>
+
+  <div style="
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width:500px;
+      ">
+    <div style="
+      align-items: center;
+      display: flex;">
+      <img src="cat.jpg" class="smallcirclecat2">
+      <div style="
+        font-family: Arial;
+        font-weight: bold;
+        margin-bottom: 3px;
+
+        ">
+        oliver <br>
+        <div style="
+          color: rgb(200,200,200);
+          font-weight: normal;">
+          the cat <br>
+          Popular
+        </div>
+      </div>
+    </div>
+    <button class="follow-button">Follow </button>
+  </div>
+
+
+  <div style="
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;">
+    <div style="
+      align-items: center;
+      display: flex;">
+      <img class="smallcirclecat2" src="cat2.jpg">
+      <div style="
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 10px;">
+        Mimi
+        <div style="
+      color: rgb(200,200,200);
+      font-weight: normal;">
+          Sleepy Cat
+          <br> Popular
+        </div>
+      </div>
+    </div>
+    <button class="follow-button">Follow</button>
+  </div>
+
+
+  <div style="
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+      width: 500px;">
+    <div style="
+      align-items: center;
+      display: flex;">
+      <img class="smallcircledog" src="dog.jpg">
+      <div style="
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 18px;
+        margin-left: 10px;">
+        Rex
+        <div style="
+        color: rgb(200,200,200);
+        font-weight: normal;">
+          Happy Bulldog <br>
+          Popular
+        </div>
+      </div>
+    </div>
+    <button class="follow-button">Follow</button>
+  </div>
+  <hr>
+
+  <div style="border-width: 1px;
+              border-style: solid;
+              border-color: rgb(200, 200, 200);
+              width: 420px;
+              border-radius: 6px;">
+    <div style="
+          display: flex;
+          flex-direction: column;
+          ">
+      <div style="font-family: Arial;
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+            ">
+        Home <div style="border: none;
+              border-style: solid;
+              background-color: rgb(49, 109, 245);
+              color: white;
+              border-radius: 20px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              padding-left: 10px;
+              padding-right: 10px;
+              font-size: 14px;
+              font-weight: bold;
+              ">14</div>
+      </div>
+      <div style="font-family: Arial;
+          display: flex;
+          justify-content: space-between;
+          width: 400px;
+          margin-left: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          align-items: center;
+          ">
+        Notifications <div style="border: none;
+            border-style: solid;
+            background-color: rgb(49, 109, 245);
+            color: white;
+            border-radius: 20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            ">3</div>
+      </div>
+
+      <div style="font-family: Arial;
+          display: flex;
+          justify-content: space-between;
+          width: 400px;
+          margin-left: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          align-items: center;
+          ">
+        Messages <div style="border: none;
+            border-style: solid;
+            background-color: rgb(49, 109, 245);
+            color: white;
+            border-radius: 20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            ">5</div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <div style=" background-color: rgb(120, 82, 178);
+      display: flex;
+      justify-content: space-between;
+      height: 60px;
+      align-items: center;
+      width: 1000px;">
+    <div style="color: white;
+        font-family: Arial;
+        font-weight: bold;
+        margin-left: 10px;">Home</div>
+    <div>
+      <input type="text" placeholder="Search" style="
+            width: 500px;
+            border-radius: 15px;
+            border: none;
+            height: 30px;
+            border: none;
+            margin-top: 12px;
+            margin-bottom: 12px;">
+    </div>
+    <div>
+      <button style="
+            border-style: solid;
+            border-width: 1px;
+            background-color: rgb(120, 82, 178);
+            color: white;
+            font-size: 16px;
+            border-color:white;
+            border-radius: 2px;
+            padding-left:15px;
+            padding-right: 15px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-right: 10px;">
+        Download</button>
+    </div>
+  </div>
+  <hr>
+
+
+  <div style="
+        display: flex;
+        height: 50px;">
+    <div style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightpink;
+            width: 100px;">
+      <div style="
+            background-color: black;
+            color: white;
+            ">item1</div>
+    </div>
+    <div style="
+        background-color: lightblue;
+        width: 200px;
+        ">
+    </div>
+  </div>
+
+  </div>
+  <hr>
+
+  <div style="
+    display: flex;
+    height: 50px;">
+
+    <div style="
+        background-color: lightpink;
+        width: 100px;">
+    </div>
+
+    <div style="
+        background-color: lightblue;
+        width: 200px;
+        ">
+      <div style="display: flex;
+            ">row1
+      </div>
+      <div style="display: flex;
+                justify-content: space-between;">
+
+        <div style="
+                background-color: black;
+                color: white;
+              ">row2
+        </div>
+        <div style="
+              background-color: black;
+              color: white;
+              ">row2
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <hr>
+
+
+  <div style="border-width: 1px;
+              border-style: solid;
+              border-color: rgb(200, 200, 200);
+              border-radius: 4px;
+              width: 440px;
+              height:130px;
+              box-shadow: 0 1px 1px rgba(0, 0, 0,0.2);
+              ">
+
+    <div style="font-family: Arial;
+                color: rgb(100,100, 100);
+                padding-left: 20px;
+                margin-bottom: 20px;
+                margin-top: 10px;">
+      ALL INBOXES
+    </div>
+
+    <div style="display: flex;
+        flex-direction: row;">
+      <div style="width: 80px;">
+        <img style="margin-left: 20px;" class="smallcirclecat" src="cat.jpg">
+      </div>
+      <div style="display: flex;
+          flex-direction: column;">
+        <div style="display: flex;">
+          <div style="flex: 1;
+                        font-family: Arial;
+                        font-weight: bold;">
+            Chewy Promotions
+          </div>
+          <div style="font-family: Arial;
+                        font-size: 14px;
+                        color: rgb(100,100, 100);
+                        width: 60px;">
+            4&colon;58 PM
+          </div>
+        </div>
+
+        <div style="font-family: Arial; font-weight: bold;">
+          Biggest sales of the year&excl;
+        </div>
+
+        <div style="font-family: Arial;
+                    color: gray;">
+          Hey there We're writting to tell you about our...
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <hr>
+
+
+
+  <div style="border-width: 1px;
+            border-style: solid;
+            border-radius: 4px;
+            border-color: rgb(200, 200, 200);
+            width: 450px;
+            height:250px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0,0.2);">
+
+
+    <div style="display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      margin-bottom: 20px;">
+
+      <img style="display: flex;
+            margin-left: 20px;" class="smallcirclecat" src="cat.jpg">
+
+      <div>
+        <div style="display: flex;
+                justify-content: space-between">
+          <div style="
+                  font-family: Arial;
+                  font-weight: bold;">
+            Chewy Promotions
+          </div>
+          <div style="
+                font-family: Arial;
+                color: gray;
+                display: flex;">
+            4&colon;58PM
+          </div>
+        </div>
+        <div style="display: flex;
+              flex: 1;
+              ">
+          <div style="
+                  font-family: Arial;
+                  font-weight: bold;">
+            Biggest sales of the year&excl;
+          </div>
+
+        </div>
+        <div style="display: flex;
+            flex: 1;">
+          <div style="
+          font-family: Arial;
+          color: gray;
+          display: flex;">
+            Hey there&excl; We're writting to tell you about our...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex;
+              flex-direction: row;
+              margin-bottom: 20px;">
+
+      <img style="
+        margin-left: 20px;" class="smallcirclecat" src="dog2.jpg">
+
+      <div style="display: flex;
+          flex-direction: column;">
+        <div style="display: flex;">
+          <div style="flex: 1;
+                      font-family: Arial;
+                      font-weight: bold;">
+            Best Buy
+          </div>
+          <div style="
+                    font-family: Arial;
+                    color: gray;">
+            12&colon;32PM
+          </div>
+        </div>
+
+        <div style="
+                      font-family: Arial;
+                      font-weight: bold;">
+          Your Best Buy eReceipt
+        </div>
+
+        <div style="
+              font-family: Arial;
+              color: gray;">
+          Thank you for shopping at Best Buy, here is...
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div style="display: flex;
+      flex-direction: row;">
+
+      <img style="margin-left: 20px;" class="smallcirclecat" src="cat2.jpg">
+
+      <div style="display: flex;
+        flex-direction: column;">
+        <div style="display: flex;">
+          <div style="
+              font-family: Arial;
+              font-weight: bold;
+              flex: 1;">
+            Netflix
+          </div>
+          <div style="
+            font-family: Arial;
+            color: gray;">
+            9&colon;00AM
+          </div>
+        </div>
+
+        <div style="
+              font-family: Arial;
+              font-weight: bold;">
+          Here's what's coming soon to Netflix
+        </div>
+
+        <div style="
+            font-family: Arial;
+            color: gray;">
+          Brand new movies and shows, old favorites...
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <hr>
+
+
+  <div style="display: flex;
+      flex-direction: row;
+      width: 420px;
+      margin-left: 20px;
+      margin-top: 10px;">
+    <div style="margin-right: 10px;">
+      <img style="width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        object-fit: cover;" class="smallcirclecat" src="cat.jpg">
+    </div>
+
+
+    <div style="
+      flex: 1;">
+
+      <div style="display: flex;
+      flex-direction: row;
+      margin-bottom: 5px;
+      font-family: Arial;">
+        <div style="margin-right: 5px;
+          font-weight: bold;">
+          supersimple.dev </div>
+        <div style="color: rgb(111,111,111);">
+          @SuperSimpleDev</div>
+      </div>
+
+
+      <div style="font-family: Arial;
+          line-height: 20px;
+          margin-bottom: 15px;">
+        What is backend web development&quest; A complete
+        overview. New video is up&excl;
+      </div>
+
+      <div style="display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(200, 200, 200);
+      border-radius: 15px;
+      overflow: hidden;">
+
+        <div style="
+        width: 100px;
+        height: 100px;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+        background-color: rgb(200, 200, 200);
+        margin-right: 10px;"></div>
+        <div style="flex: 1; 
+          font-family: Arial;">
+          <div style="color: rgb(111, 111, 111);
+          margin-bottom: 3px;">
+            youtube.com </div>
+          <div style="line-height: 22px;">Backend web development - a
+            complete overview (2021)</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <hr>
+  <div style="font-family: Arial;
+  display: flex;
+  align-items: center;
+  border-style: solid;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  width: 300px;
+  height: 100px;
+  ">
+    <div style="margin-left: 10px;">
+      <div style="font-weight: bold;
+      margin-bottom: 10px;">
+        Modal Title
+      </div>
+      <div style="margin-bottom: 5px;">This is a modal</div>
+      <button>Close</button>
+    </div>
+
+  </div>
+
+
+
+
+</body>
+
+</html>
